@@ -1,0 +1,38 @@
+.menu{
+    max-width: auto;
+    min-height: 60px;
+    margin: auto;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid red ;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+
+.btndropdown {
+    background-color: transparent;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    border: 1px solid yellow ;
+    border-radius: 5px;
+}
+
+.dropdown:hover .btndropdown {
+    background-color: transparent;
+    color: yellow;
+    font-size: 18px;
+    transition: all 1s;
+}

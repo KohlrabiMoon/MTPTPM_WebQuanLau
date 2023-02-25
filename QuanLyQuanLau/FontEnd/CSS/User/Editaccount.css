@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CSS cho body tag */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.account-info{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid red;
+    background-color: rgba(230, 224, 235, 0.856);
+}
+
+
+.infoac{
+    width: 90%;
+    height: 320px;
+    margin: auto;
+    border: 1px solid black;
+}
+.left-info-account{
+    width: 20%;
+    height: 200px;
+    margin: auto;
+    float: left;
+}
+
+.right-info-account{
+    width: 40%;
+    height: 250px;
+    margin: auto;
+    margin-left: 5%;
+    float: left;
+}
+
+.image-qcac{
+    width: 25%;
+    height: 260px;
+    margin: auto;
+    margin-left: 10%;
+    border: 1px solid rgb(248, 172, 185);
+    float: left;
+}
+
+.image-qcac img{
+    width: 100%;
+    height: 258px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+.dropdown {
+    width: 200px;
+  }
+
+.dropdown ul{
+    display: none;
+}
+
+.dropdown li{
+    width: 180px;
+    background-color: transparent;
+    line-height: 30px;
+    list-style: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-right: 5px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.dropdown li:hover{
+    background-color: transparent;
+}
+
+.dropdown li a{
+    text-decoration: none;
+}
+
+.dropdown li ul li a{
+    color: darkviolet;
+}
+
+.dropdown li ul li a:hover{
+    color: darkmagenta;
+}
+
+.dropdown li ul li{
+    width: auto;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.dropdown li ul li:hover{
+    width: auto;
+    background-color: rgb(248, 252, 49);
+    border: 1px solid white;
+    color: white;
+}
+
+.menu{
+    background: transparent;
+    width: 170px;
+    font-size: 20px;
+    height: 30px;
+    margin: auto;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.menu:active{
+    background-color:  darkorchid;
+    color:rgb(248, 252, 49) ;
+}
+
+.thongbaoac{
+    width: 100%;
+    height: 50px;
+    border: 5px solid pink;
+    border-radius: 2px;
+}
+
+.thaydoiac{
+    width: 100%;
+    height: 220px;
+    border: 5px solid pink;
+    border-radius: 2px;
+}
+
+.thaydoiac p{
+    margin-top: 20px;
+    text-align: left;
+    /* transform: translateY(100%); */
+}
+
+.thaydoiac input{
+    width: 300px;
+    height: 25px;
+    border-radius: 1px;
+    border-color: rgb(247, 115, 68);
+    margin-left: 2px;
+    background-color: white;
+    float: right;
+}
+
+.labelgioitinh{
+    margin-left: 0px;
+    margin-right: 100px;
+}
+
+.thaydoiac li{
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.accept-acount{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    /* border: 2px solid yellow; */
+    float: left;
+    align-items: center;
+    justify-items: center;
+}
+
+.accept-acount button{
+    width: 10%;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 3px;
+    border: 2px solid black;
+    background-color: red;
+    color: whitesmoke;
+}
+
+.accept-acount button:hover{
+    font-size: 21px;
+    border-radius: 5px;
+    color: black;
+    transition: all 500ms;
+}
+
+.thaydoiac input:focus{
+    background-color: rgb(36, 27, 27);
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+}
+
