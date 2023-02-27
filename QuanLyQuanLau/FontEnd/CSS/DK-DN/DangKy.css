@@ -73,14 +73,14 @@ body {
     margin-left: 0px;
     margin-top: 20px;
     font-size: 12px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 .taikhoan{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
     margin-left: 2px;
 }
 
@@ -88,35 +88,35 @@ body {
     margin-left: 0px;
     margin-top: 12px;
     font-size: 12px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 .matkhau{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
 }
 
 .note {
     margin-left: 15px;
     margin-top: 10px;
     font-size: 16px;
-    color:maroon;
+    color:rgb(220,20,60);
 }
 
 .labelhoten{
     margin-left: 0px;
     margin-top: 0px;
     font-size: 12px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 .ho{
     width: 100px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
     margin-left: 2px;
 }
 
@@ -124,7 +124,7 @@ body {
     width: 180px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
     margin-left: 10px;
 }
 
@@ -132,20 +132,20 @@ body {
     margin-left: 0px;
     margin-top: 5px;
     font-size: 12px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 .sdt{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
 }
 
 .labelgioitinh{
     margin-left: 0px;
     margin-top: 5px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 li{
@@ -179,14 +179,14 @@ li{
     margin-left: 0px;
     margin-top: 7px;
     font-size: 12px;
-    color: yellowgreen;
+    color: #000000;
 }
 
 .diachi{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: yellow;
+    border-color: peachpuff;
 }
 
 .btndangky{
@@ -195,9 +195,8 @@ li{
     width: 150px;
     border-radius: 5px;
     margin-left: 100px;
-    border-color: cyan;
-    background-color: slategrey;
-    color: cyan;
+    background-color: #fff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -206,5 +205,7 @@ li{
     margin: auto;
     font-size: large;
     font-style: italic;
-    color: darkorchid;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

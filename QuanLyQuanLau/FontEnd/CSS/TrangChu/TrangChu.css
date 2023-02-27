@@ -75,17 +75,10 @@ body {
     transition: all 1s;
 }
 
-
-
-
-
 .noidung{
     width: 100%;
     height: 500px;
 }
-
-
-
 
 .slideshow{
     width: 1000px;
@@ -120,11 +113,11 @@ body {
     display: block;
 }
 
-  .prev:hover, .next:hover {
+.prev:hover, .next:hover {
     background: rgba(0,0,0,0.8);
-  }
+}
 
-  .dieuhuong i:last-child{
+.dieuhuong i:last-child{
     position: relative;
     left: 870px;
-  }
+}

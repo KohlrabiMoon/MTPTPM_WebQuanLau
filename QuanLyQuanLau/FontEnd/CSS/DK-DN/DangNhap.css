@@ -73,35 +73,35 @@ body {
     margin-left: 0px;
     margin-top: 40px;
     font-size: 12px;
-    color: blueviolet;
+    color: #000000;
 }
 
 .taikhoan{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: red;
+    border-color: #555;
 }
 
 .labelmatkhau{
     margin-left: 0px;
     margin-top: 12px;
     font-size: 12px;
-    color: blueviolet;
+    color: #000000;
 }
 
 .matkhau{
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border-color: red;
+    border-color: #555;
 }
 
 .error{
     font-size: 12px;
     margin-top: 4px;
     margin-left: 25px;
-    color: Red;
+    color: red;
 }
 
 .dangnhap{
@@ -111,9 +111,9 @@ body {
     border-radius: 5px;
     text-align: center;
     margin-left: 70px;
-    border-color: blue;
-    background-color: yellow;
-    color: blue;
+    border-color: #555;
+    background-color: #ffff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -122,7 +122,7 @@ body {
     margin-left: 20px;
     margin-top: 10px;
     font-size: 16px;
-    color:yellowgreen;
+    color: rgb(220,20,60);
 }
 
 .quenmatkhau{
@@ -154,5 +154,7 @@ body {
     margin: auto;
     font-size: large;
     font-style: italic;
-    color: darkorchid;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
