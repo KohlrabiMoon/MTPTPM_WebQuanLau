@@ -1,0 +1,223 @@
+/* CSS cho toàn trang */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CSS cho body tag */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.index-taikhoan{
+    width: auto;
+    height: 600px;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.show-taikhoan{
+    width: 85%;
+    height: auto;
+    /* border: 1px solid blue; */
+    margin: auto;
+    margin-top: 10px;
+}
+
+.taikhoan{
+    width: auto;
+    position: relative;
+    height: 98px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.indexrole{
+    display: block;
+    width: 70px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexrole p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexaccount{
+    display: block;
+    width: 130px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexaccount p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexpass{
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexpass p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexhoten{
+    display: block;
+    width: 180px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexhoten p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexgioitinh{
+    display: block;
+    width: 80px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexgioitinh p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexphone{
+    display: block;
+    width: 120px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexphone p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(150%);
+}
+
+.indexaddress{
+    display: block;
+    width: 190px;
+    height: 100px;
+    font-size: 16px;
+    margin-left: 20px;
+    float: left;
+    /*border: 1px solid yellow;*/
+}
+
+.indexaddress p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: left;
+    /* transform: translateY(150%); */
+}
+
+.controltk{
+    display: block;
+    width: 85px;
+    height: 200px;
+    font-size: 16px;
+    margin-left: 10px;
+    float: left;
+    /* transform: translateY(400%); */
+    /*/*border: 1px solid yellow;*/
+}
+
+.controltk button{
+    display: block;
+    width: 85px;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transform: translateY(0%);
+    border-radius: 2px;
+    border: 2px solid white;
+}
+
+
+.pagination{
+    width: auto;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-left: 500px;
+    text-align: center;
+    list-style: none;
+    /* border: 2px solid yellow; */
+    position: relative;
+}
+
+.pagination li {
+    text-align: center;
+    margin: auto;
+    color: black;
+    float: left;
+    padding: 12px 18px;
+    text-decoration: none;
+}
+.pagination li.active {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
+
+.pagination li:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 50%;
+}
+.btn-active{
+    opacity: 50%;
+    border-radius: 50%;
+}
+
+.taikhoan:hover{
+    background-color: rgb(90, 76, 76);
+    color: rgb(168, 138, 5);
+}
+

@@ -1,0 +1,160 @@
+/* CSS cho toàn trang */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CSS cho body tag */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #F59794;
+}
+
+.giaodien{
+    display: flex;
+    flex: 1 1 0%;
+    align-self: center;
+    max-width: none;
+    max-height: none;
+    margin: 0px;
+    overflow: hidden;
+    border-radius: 0px;
+    --x-shadow: 0px 0.5px 10px rgba(117,125,133,0.08),0px 3px 20px rgba(117,125,133,0.2);
+    box-shadow: var(--x-ring-shadow,0 0 #0000),var(--x-shadow);
+}
+
+.imgdn{
+    position: absolute; 
+    inset: 0px; 
+    box-sizing: border-box; 
+    padding: 0px; 
+    border: none; 
+    margin: auto; 
+    display:block; 
+    width: 700px; 
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 10px;
+    right: 300px;
+}
+
+.nhapdulieu{
+    position: absolute;
+    inset: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 1.75rem;
+    margin: auto; 
+    width: 400px; 
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 10px;
+    left: 600px;
+}
+
+.nhapdulieu i{
+    margin-top: 5px;
+}
+
+.label{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.labeltentaikhoan{
+    margin-left: 0px;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.taikhoan{
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border-color: #555;
+}
+
+.labelmatkhau{
+    margin-left: 0px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.matkhau{
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border-color: #555;
+}
+
+.error{
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 25px;
+    color: red;
+}
+
+.dangnhap{
+    margin-top: 10px;
+    height: 60px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 70px;
+    border-color: #555;
+    background-color: #ffff;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+.note {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(220,20,60);
+}
+
+.quenmatkhau{
+    text-align: center;
+    margin-top: 5px;
+    height: 30px;
+    width: 140px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: white;
+    border-color: gray;
+    font-weight: bold;
+}
+
+.dangky{
+    text-align: center;
+    margin-top: 5px;
+    height: 30px;
+    width: 140px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: gray;
+    font-weight: bold;
+}
+
+.chuthich{
+    text-align: center;
+    margin: auto;
+    font-size: large;
+    font-style: italic;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

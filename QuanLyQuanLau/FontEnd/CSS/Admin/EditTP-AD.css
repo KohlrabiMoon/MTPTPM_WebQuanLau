@@ -1,0 +1,141 @@
+/* CSS cho toàn trang */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CSS cho body tag */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.edit-thucpham{
+    width: auto;
+    height: 400px;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.edit{
+    width: 80%;
+    height: 351px;
+    /* border: 1px solid blue; */
+    margin: auto;
+    background: radial-gradient( circle, rgb(220, 236, 77)0%, rgb(182, 110, 3)100%);
+    border:1px solid black;
+    margin-top: 50px;
+    border-radius: 2px;
+}
+
+.left-edit{
+    width: 50%;
+    float: left;
+    height: 350px;
+    /* border: 1px solid red; */
+    border-radius: 2px;
+    color: black;
+}
+
+.left-edit p{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.left-edit input{
+    width: 60%;
+    font-size: 16px;
+    float: right;
+    margin-right: 50px;
+}
+
+.left-edit textarea{
+    width: 60%;
+    height: 100px;
+    font-size: 16px;
+    float: right;
+    margin-right: 50px;
+}
+
+.right-edit{
+    width: 50%;
+    float: left;
+    height: 350px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+
+.right-edit p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.right-edit img{
+    width: 360px;
+    height: 220px;
+    margin-top: 30px;
+    margin-left: 80px;
+    border: 1px dashed red;
+}
+
+.right-edit input{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.drag-area{
+    width: 88%;
+    height: 50vh;
+    font-size: 16px;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px dashed black;
+    padding: 6px;
+    
+}
+
+.drag-area button{
+    width: 100px;
+    font-size: 20px;
+    background: white;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+    border-radius: 3px;
+}
+
+.noidung-drag{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(150%);
+    /* justify-items: center; */
+}
+
+.right-edit img:hover{
+    width: 420px;
+    height: 280px;
+    margin-top: 0px;
+    margin-left: 50px;
+    transition: all 1s;
+}
+
+.left-edit p input:focus{
+    color: rgb(240, 154, 154);
+    font-size: 18px;
+    background-color: rgb(73, 62, 62);
+}

@@ -1,0 +1,148 @@
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/QuanLyQuanLau/FontEnd/HTML/TrangChu/TrangChu.html">
+                <img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-img" >
+                </a>
+            </div>
+            <input type="search" class="btntimkiem" placeholder="Tìm kiếm" >
+            <a href="" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="google">
+                <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a href="" class="youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="http://127.0.0.1:5500/QuanLyQuanLau/FontEnd/HTML/DK-DN/DangNhap.html"  class="dangnhap">
+            <i class="fa-solid fa-power-off" style="color: white; margin-right: 2px;"></i>
+            <label type="submit" class="btndangnhap">ĐĂNG NHẬP</label>
+            </a>
+        </div>
+    </div>
+    <style>
+        .header {
+            background: radial-gradient( circle, rgb(111, 189, 241)0%, rgb(230, 95, 42)100%);
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo-img{
+            width: 150px;
+        }
+        
+        .btntimkiem{
+            margin-left: 40px;
+            width: 300px;
+            height: 25px;
+            border: 2px solid black;
+            display: block;
+            border-radius: 5px;
+            color: white;
+            padding: 9px 4px 9px 40px;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+        }
+        
+        .btndangnhap{
+            float: right;
+            font-size: 16px;
+            color: white;
+        }
+        
+        .dangnhap{
+            margin-left: 80px;
+        }
+        
+        .facebook{
+            margin-left: 400px;
+        }
+        
+        .google{
+            margin-left: 30px;
+        }
+        
+        .youtube{
+            margin-left: 30px;
+        }
+        
+    </style>
+</div>
+
+<!-- nav -->
+<div w3-include-html="Header.html">
+    <script>
+        includeHTML();
+    </script>
+    <div class="menu">
+        <div class="dropdown">
+            <button class="btndropdown">Trang Chủ</button>
+        </div>
+        <div class="dropdown">
+            <button type="submit" class="btndropdown">Thực đơn</button>
+        </div>
+        <div class="dropdown">
+            <button class="btndropdown">Giới thiệu</button>
+        </div>
+        <div class="dropdown">
+            <button class="btndropdown">Tuyển dụng</button>
+        </div>
+        <div class="dropdown">
+        </div>
+        <div class="dropdown">
+            <button class="btndropdown">Đóng góp</button>
+        </div>
+        <div class="dropdown">
+            <a href="/QuanLyQuanLau/FontEnd/HTML/User/Giohang.html">
+            <i class="fas fa-shopping-cart" style="margin-left: 200px;"></i></a>
+        </div>
+    
+    <!-- Js (load javascript) -->
+    <script>
+        var KT = document.getElementsByClassName("slideshow")[0].clientWidth;
+        var chuyenslide = document.getElementsByClassName("chuyen-slide")[0];
+        var hinhanh = chuyenslide.getElementsByTagName("img");
+        var max = KT * hinhanh.length;
+        max -= KT;
+        var chuyenphai = 0;
+
+        function Next(){
+            if(chuyenphai < max){
+                chuyenphai += KT;
+            }
+            else{
+                chuyenphai = 0;
+            }
+            chuyenphai += KT - 1320;
+            chuyenslide.style.marginLeft = "-" + chuyenphai +"px";
+        }
+
+        function Preview(){
+            if(chuyenphai == 0){
+                chuyenphai = max;
+            }
+            else{
+                chuyenphai -= KT;
+            }
+            chuyenphai -= KT - 1320;
+            chuyenslide.style.marginLeft = "-" + chuyenphai +"px";
+        }
+
+        setInterval(function(){
+            Next();
+        },3000); 
+    </script>    
+</div>

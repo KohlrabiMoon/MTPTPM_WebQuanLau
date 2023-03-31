@@ -1,0 +1,66 @@
+.dropdown {
+    width: 200px;
+  }
+
+.dropdown ul{
+    display: none;
+}
+
+.dropdown li{
+    width: 180px;
+    background-color: transparent;
+    line-height: 30px;
+    list-style: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-right: 5px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.dropdown li:hover{
+    background-color: transparent;
+}
+
+.dropdown li a{
+    text-decoration: none;
+}
+
+.dropdown li ul li a{
+    color: darkviolet;
+}
+
+.dropdown li ul li a:hover{
+    color: darkmagenta;
+}
+
+.dropdown li ul li{
+    width: auto;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.dropdown li ul li:hover{
+    width: auto;
+    background-color: rgb(248, 252, 49);
+    border: 1px solid white;
+    color: white;
+}
+
+.menu{
+    background: transparent;
+    width: 170px;
+    font-size: 20px;
+    height: 30px;
+    margin: auto;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.menu:active{
+    background-color:  darkorchid;
+    color:rgb(248, 252, 49) ;
+}
