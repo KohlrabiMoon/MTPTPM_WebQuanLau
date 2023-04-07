@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="shortcut icon" href="images/icon.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Hot Pot Wang</title>
+</head>
+
+<body>
+  <div class="navigation-wrap bg-light start-header start-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-md navbar-light">
+
+            <a class="navbar-brand grow" href="/"><img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-img"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto py-4 py-md-0">
+                <% if(user){ %>
+                <%if(user.admin){%>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/compose">Compose</a>
+                </li>
+                <%}%>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="/user/<%= user._id %>">Hi, <%=user.name%></a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+                <%}%>
+                <%if(!user){%>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/register">Register</a>
+                </li>
+                <%}%>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="false" style="margin-right: 3px;" ></i>Cart<span id="cartCounter"><%= session.cart ? '['+session.cart.totalQty +']' : '' %></span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
+  <h1 class="admin-head">Welcome to Admin</h1>
+  <% if(orders.length===0){ %>
+  <div class="container admin-pp admin-pp-img">
+    <h1>No orders</h1>
+    <img src="images/admin.png" alt="">
+  </div>
+  <% }else{ %>
+  <div class="container admin-pp">
+    <h1>Quản lý đơn hàng</h1>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">ID đơn hàng</th>
+          <th scope="col">ID người dùng</th>
+          <th scope="col">SĐT</th>
+          <th scope="col">Trạng thái</th>
+          <th scope="col">Ngày</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0;i<orders.length;i++){ %>
+        <tr>
+          <td data-label="Order ID"><a href="/orders/<%= orders[i]._id %>"><%= orders[i]._id %></a></td>
+          <td data-label="User ID"><%= orders[i].userid %></td>
+          <td data-label="Phone"><%= orders[i].phone %></td>
+          <td data-label="Status">
+            <form action="/orders/status" method="post">
+              <input type="hidden" name="orderId" value="<%= orders[i]._id %>">
+              <div class="form-group">
+                <select class="form-control" id="exampleFormControlSelect1" name="status" onchange="this.form.submit()">
+                  <option value="Đã đặt hàng" <%= orders[i].status==='order placed' ? 'selected' : '' %>>Đã đặt hàng</option>
+                  <option value="Đã xác nhận" <%= orders[i].status==='confirmed' ? 'selected' : '' %>>Đã xác nhận</option>
+                  <option value="Đang giao hàng" <%= orders[i].status==='out for delivery' ? 'selected' : '' %>>Đang giao hàng</option>
+                  <option value="Đã giao hàng" <%= orders[i].status==='delivered' ? 'selected' : '' %>>Đã giao hàng</option>
+                </select>
+              </div>
+            </form>
+          </td>
+          <td data-label="Date"><%= orders[i].date %></td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+        <hr>
+        <a href="/">
+          <button type="button" class="btn-primary" name="button">Back to Store</button>
+        </a>
+      </div>
+    <%}%>
+
+
+
+
+
+
+        <!-- contact section -->
+        <footer id="contact" class="contact-section">
+          <br><br>
+        </div>
+          <br>
+          <div class="self">
+    
+            <div class="fotter">
+              <div class="container">
+                  <div class="row">
+                  <div class="footer-rol-1">
+                      <img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-footer">
+                  </div>
+                  <div class="footer-rol-2">
+                      <p style="text-align: center;">Công ty TNHH Deli</p>
+                      <p><i class="fa fa-shop"></i>Cửa hàng Buffet Lẩu Tiểu Màn Thầu
+                          <br>
+                          <i class="fa fa-map-marker"></i>
+                          <label>199 Điện Biên Phủ, P.2, Q.Bình Thạnh, TP.HCM</label>
+                          <br>
+                          <i class="fa fa-mobile"></i>
+                          <label>0123456789</label>
+                      </p>
+                  </div>
+                  <div class="footer-rol-3">
+                      <label>Lẩu TMT là hệ thống chuỗi nhà hàng buffet lẩu tại TP.HCM được đánh giá cao về chất lượng và giá cả. Buffet tại Lẩu gồm: 139K – 179K , khách hàng sẽ được thưởng thức tới gần 50 món ăn từ ba chỉ bò Mỹ...</label>
+                  </div>
+              </div>
+              <br>
+            <h1>Made with ❤ by <a href="https://github.com/KohlrabiMoon">Me</a></h1>
+            <ul class="social-icons">
+              <li><a href="https://www.linkedin.com/in/ashutosh-nayak-a67117173/"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/KohlrabiMoon"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://www.facebook.com/kan.kohlrabi"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/kan.npch"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="cs-copy">
+            <p>Copyright Hot Pot</p>
+          </div>
+        </footer>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="../node_modules/noty/lib/noty.min.js" charset="utf-8"></script> -->
+        <script src="/js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
