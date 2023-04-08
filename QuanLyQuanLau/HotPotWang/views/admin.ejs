@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Book Empire-Home</title>
+  <title>Hot Pot Wang</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
 
-            <a class="navbar-brand grow" href="/">BOOK EMPIRE</a>
+            <a class="navbar-brand grow" href="/"><img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-img"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
                 </li>
                 <%}%>
                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="/cart"> Cart <span id="cartCounter"><%= session.cart ? '['+session.cart.totalQty +']' : '' %></span></a>
+                  <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="false" style="margin-right: 3px;" ></i>Cart<span id="cartCounter"><%= session.cart ? '['+session.cart.totalQty +']' : '' %></span></a>
                 </li>
               </ul>
             </div>
@@ -63,7 +63,7 @@
   </div>
   <br><br><br><br>
 
-  <h1 class="admin-head">Welcome to Admin Panel</h1>
+  <h1 class="admin-head">Welcome to Admin</h1>
   <% if(orders.length===0){ %>
   <div class="container admin-pp admin-pp-img">
     <h1>No orders</h1>
@@ -71,16 +71,16 @@
   </div>
   <% }else{ %>
   <div class="container admin-pp">
-    <h1>All Orders</h1>
+    <h1>Quản lý đơn hàng</h1>
     <hr>
     <table>
       <thead>
         <tr>
-          <th scope="col">Order ID</th>
-          <th scope="col">User ID</th>
-          <th scope="col">Phone</th>
-          <th scope="col">Status</th>
-          <th scope="col">Date</th>
+          <th scope="col">ID đơn hàng</th>
+          <th scope="col">ID người dùng</th>
+          <th scope="col">SĐT</th>
+          <th scope="col">Trạng thái</th>
+          <th scope="col">Ngày</th>
         </tr>
       </thead>
       <tbody>
@@ -94,10 +94,10 @@
               <input type="hidden" name="orderId" value="<%= orders[i]._id %>">
               <div class="form-group">
                 <select class="form-control" id="exampleFormControlSelect1" name="status" onchange="this.form.submit()">
-                  <option value="order placed" <%= orders[i].status==='order placed' ? 'selected' : '' %>>order placed</option>
-                  <option value="confirmed" <%= orders[i].status==='confirmed' ? 'selected' : '' %>>confirmed</option>
-                  <option value="out for delivery" <%= orders[i].status==='out for delivery' ? 'selected' : '' %>>out for delivery</option>
-                  <option value="delivered" <%= orders[i].status==='delivered' ? 'selected' : '' %>>delivered</option>
+                  <option value="Đã đặt hàng" <%= orders[i].status==='order placed' ? 'selected' : '' %>>Đã đặt hàng</option>
+                  <option value="Đã xác nhận" <%= orders[i].status==='confirmed' ? 'selected' : '' %>>Đã xác nhận</option>
+                  <option value="Đang giao hàng" <%= orders[i].status==='out for delivery' ? 'selected' : '' %>>Đang giao hàng</option>
+                  <option value="Đã giao hàng" <%= orders[i].status==='delivered' ? 'selected' : '' %>>Đã giao hàng</option>
                 </select>
               </div>
             </form>
@@ -122,24 +122,42 @@
         <!-- contact section -->
         <footer id="contact" class="contact-section">
           <br><br>
-          <div class="info">
-            <p><a href="/terms" style="color:black;">Terms</a></p>
-            <p><a href="/privacy" style="color:black;">Privacy Policy</a></p>
-            <p><a href="/refund" style="color:black;">Refund Policy</a></p>
-            <p><a href="/disclaimer" style="color:black;">Disclaimer</a></p>
-          </div>
+        </div>
           <br>
           <div class="self">
-            <h1>Made with ❤ by <a href="https://www.linkedin.com/in/ashutosh-nayak-a67117173/">Ashutosh Nayak</a></h1>
+    
+            <div class="fotter">
+              <div class="container">
+                  <div class="row">
+                  <div class="footer-rol-1">
+                      <img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-footer">
+                  </div>
+                  <div class="footer-rol-2">
+                      <p style="text-align: center;">Công ty TNHH Deli</p>
+                      <p><i class="fa fa-shop"></i>Cửa hàng Buffet Lẩu Tiểu Màn Thầu
+                          <br>
+                          <i class="fa fa-map-marker"></i>
+                          <label>199 Điện Biên Phủ, P.2, Q.Bình Thạnh, TP.HCM</label>
+                          <br>
+                          <i class="fa fa-mobile"></i>
+                          <label>0123456789</label>
+                      </p>
+                  </div>
+                  <div class="footer-rol-3">
+                      <label>Lẩu TMT là hệ thống chuỗi nhà hàng buffet lẩu tại TP.HCM được đánh giá cao về chất lượng và giá cả. Buffet tại Lẩu gồm: 139K – 179K , khách hàng sẽ được thưởng thức tới gần 50 món ăn từ ba chỉ bò Mỹ...</label>
+                  </div>
+              </div>
+              <br>
+            <h1>Made with ❤ by <a href="https://github.com/KohlrabiMoon">Me</a></h1>
             <ul class="social-icons">
               <li><a href="https://www.linkedin.com/in/ashutosh-nayak-a67117173/"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/nayakashutosh9"><i class="fa fa-github"></i></a></li>
-              <li><a href="https://www.facebook.com/nayakashutosh9/"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://www.instagram.com/mr._.nayak/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://github.com/KohlrabiMoon"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://www.facebook.com/kan.kohlrabi"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/kan.npch"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
           <div class="cs-copy">
-            <p>Copyright since 2021 © Book Empire</p>
+            <p>Copyright Hot Pot</p>
           </div>
         </footer>
 

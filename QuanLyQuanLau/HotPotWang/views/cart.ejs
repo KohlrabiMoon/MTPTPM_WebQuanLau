@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Book Empire-Home</title>
+  <title>Hot Pot Wang</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
 
-            <a class="navbar-brand grow" href="/">BOOK EMPIRE</a>
+            <a class="navbar-brand grow" href="/"><img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-img" ></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -76,13 +76,13 @@
                 <div class="col-xs-6 cart-info">
                   <a href="/product/<%= session.cart.items[key].item._id %>">
                     <h1><%= session.cart.items[key].item.title %></h1>
-                  </a>
+                  </a>  
                   <p>Quantity: <button type="button" name="button" data-book="<%= JSON.stringify(session.cart.items[key].item) %>" class="qty-dec">-</button> <span class="elementQuantity"><%= session.cart.items[key].qty %></span> <button type="button" name="button" data-book="<%= JSON.stringify(session.cart.items[key].item) %>" class="qty-inc">+</button></p>
                 </div>
                 <div class="col-xs-3 cart-price">
                   <h3><%= session.cart.items[key].item.price %></h3>
                   <form action="/cart/remove/<%= key %>" method="post">
-                    <button type="submit" class="btn-danger" name="button">Remove</button>
+                    <button type="submit" class="btn-danger" name="button">Xoá</button>
                   </form>
                 </div>
               </div>
@@ -93,11 +93,11 @@
       </div>
       <div class="col-md-4 cart-right price-details">
         <div class="empty container">
-          <h1>Price Details</h1>
+          <h1>Chi tiết đơn hàng</h1>
           <hr>
           <div class="row">
             <div class="col-xs-6 pdl">
-              <h2>Subtotal</h2>
+              <h2>Tổng phụ</h2>
             </div>
             <div class="col-xs-6 pdr">
               <h2><%= session.cart.totalPrice %></h2>
@@ -105,7 +105,7 @@
           </div>
           <div class="row">
             <div class="col-xs-6 pdl">
-              <h2>GST</h2>
+              <h2>Thuế</h2>
             </div>
             <div class="col-xs-6 pdr">
               <h2> 0</h2>
@@ -114,7 +114,7 @@
           <hr>
           <div class="row">
             <div class="col-xs-6 pdl">
-              <h1>Total Price</h1>
+              <h1>Tổng Tiền</h1>
             </div>
             <div class="col-xs-6 pdr">
               <h1> <%= session.cart.totalPrice %></h1>
@@ -125,16 +125,16 @@
           <form action="/orders" method="post">
             <div class="form-group">
               <select class="form-control" id="exampleFormControlSelect1" name="paymentType" required>
-                <option value="COD">Cash on Delivery</option>
-                <option value="card">Pay with Card</option>
+                <option value="COD">Thannh toán khi nhận hàng</option>
+                <option value="card">ATM</option>
               </select>
             </div>
             <input type="tel" class="form-control" id="formGroupExampleInput" placeholder="Phone" name="phone" required>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Address" name="address" required>
-            <button type="submit" class="btn-primary" name="button">Checkout</button>
+            <button type="submit" class="btn-primary" name="button">Thanh Toán</button>
           </form>
         <% }else{ %>
-          <a href="/login"><button type="button" class="btn-danger" name="button">Login to Continue</button></a>
+          <a href="/login"><button type="button" class="btn-danger" name="button">Đăng nhập lại</button></a>
         <% } %>
       </div>
     </div>
@@ -152,34 +152,45 @@
     </div>
   <%}%>
 
-
-
-
-
-
-
-
   <!-- contact section -->
   <footer id="contact" class="contact-section">
     <br><br>
-    <div class="info">
-      <p><a href="/terms" style="color:black;">Terms</a></p>
-      <p><a href="/privacy" style="color:black;">Privacy Policy</a></p>
-      <p><a href="/refund" style="color:black;">Refund Policy</a></p>
-      <p><a href="/disclaimer" style="color:black;">Disclaimer</a></p>
-    </div>
+  </div>
     <br>
     <div class="self">
-      <h1>Made with ❤ by <a href="https://www.linkedin.com/in/ashutosh-nayak-a67117173/">Ashutosh Nayak</a></h1>
+
+      <div class="fotter">
+        <div class="container">
+            <div class="row">
+            <div class="footer-rol-1">
+                <img src="https://lauwang.vn/wp-content/uploads/2020/08/logo-L%E1%BA%A9u-Wang-01.png" class="logo-footer">
+            </div>
+            <div class="footer-rol-2">
+                <p style="text-align: center;">Công ty TNHH Deli</p>
+                <p><i class="fa fa-shop"></i>Cửa hàng Buffet Lẩu Tiểu Màn Thầu
+                    <br>
+                    <i class="fa fa-map-marker"></i>
+                    <label>199 Điện Biên Phủ, P.2, Q.Bình Thạnh, TP.HCM</label>
+                    <br>
+                    <i class="fa fa-mobile"></i>
+                    <label>0123456789</label>
+                </p>
+            </div>
+            <div class="footer-rol-3">
+                <label>Lẩu TMT là hệ thống chuỗi nhà hàng buffet lẩu tại TP.HCM được đánh giá cao về chất lượng và giá cả. Buffet tại Lẩu gồm: 139K – 179K , khách hàng sẽ được thưởng thức tới gần 50 món ăn từ ba chỉ bò Mỹ...</label>
+            </div>
+        </div>
+        <br>
+      <h1>Made with ❤ by <a href="https://github.com/KohlrabiMoon">Me</a></h1>
       <ul class="social-icons">
         <li><a href="https://www.linkedin.com/in/ashutosh-nayak-a67117173/"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/nayakashutosh9"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://www.facebook.com/nayakashutosh9/"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/mr._.nayak/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://github.com/KohlrabiMoon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.facebook.com/kan.kohlrabi"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/kan.npch"><i class="fa fa-instagram"></i></a></li>
       </ul>
     </div>
     <div class="cs-copy">
-      <p>Copyright since 2021 © Book Empire</p>
+      <p>Copyright Hot Pot</p>
     </div>
   </footer>
 

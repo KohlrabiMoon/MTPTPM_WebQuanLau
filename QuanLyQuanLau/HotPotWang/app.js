@@ -13,6 +13,9 @@ const cloudinary = require("cloudinary").v2;
 const upload = require("./multer/multer");
 const stripe = require("stripe")(process.env.STRIPE_SKEY);
 
+//  test
+const {login} = require('./test/login');
+// 
 //
 
 //
@@ -78,11 +81,6 @@ const productSchema = new mongoose.Schema({
   imgurl: String,
   imgid: String,
   price: String,
-  author: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "Author",
-  },
 });
 
 productSchema.virtual("coverImagePath").get(function () {
@@ -137,7 +135,7 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: "order placed",
+    default: "đã giao hàng",
   },
 });
 const Order = new mongoose.model("Order", orderSchema);
@@ -714,4 +712,5 @@ app.get("/:page", async (req, res, next) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
   console.log("Server is running on port " + PORT);
+  console.log(login('a','b'));
 });
