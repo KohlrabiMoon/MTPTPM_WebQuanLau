@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1680949396145" clover="3.2.0">
+  <project timestamp="1680949396146" name="All files">
+    <metrics statements="11" coveredstatements="8" conditionals="10" coveredconditionals="6" methods="1" coveredmethods="1" elements="22" coveredelements="15" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+    <file name="Dangnhap.js" path="F:\Project VSCode\MTPTPM_WebQuanLau\MTPTPM_WebQuanLau\QuanLyQuanLau\BackEnd\HotPotWang\Test\Dangnhap.js">
+      <metrics statements="11" coveredstatements="8" conditionals="10" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="9" count="1" type="cond" truecount="2" falsecount="2"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

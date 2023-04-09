@@ -710,3 +710,18 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
   console.log("Server is running on port " + PORT);
 });
+
+// const {Dangnhap} = require('./Test/Dangnhap');
+// const util = require('util');
+
+// console.log(Dangnhap('',''));
+
+// app.get("/login", function (req, res) {
+//   if (req.isAuthenticated()) {
+//     res.redirect("/");
+//   } else {
+//     res.render("login", {
+//       user: null,
+//     });
+//   }
+// });
