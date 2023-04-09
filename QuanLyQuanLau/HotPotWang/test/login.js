@@ -1,57 +1,3 @@
-// function login(req, res){
-//     if(isNaN(req.isAuthenticated)){
-//         // throw new Error('login error');
-//         res.redirect("/");
-//     }
-//     res.render("login", {
-//         user: null,
-//       });;
-// }
-// module.exports ={
-//     login
-// }
-
-// app.get("/login", function (req, res) {
-//     if (req.isAuthenticated()) {
-//       res.redirect("/");
-//     } else {
-//       res.render("login", {
-//         user: null,
-//       });
-//     }
-//   });
-
-// userSchema.plugin(passportLocalMongoose);
-// const User = new mongoose.model("User", userSchema);
-// passport.use(User.createStrategy());
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
-
-// function login (req, res) {
-//   const user = new User({
-//     username: req.body.username,
-//     password: req.body.password,
-//   });
-//   req.login(user, async function (err) {
-//     if(isNull(user) || isNumber(user.username)){
-//             throw new Error('tài khoản không tồn tại');
-//           }
-//     if (err) {
-//       throw new Error(err);
-//     } else {
-//       await passport.authenticate("local")(req, res, function () {
-//         return 'login thành công';
-//       });
-//     }
-//   });
-// }
-
-// module.exports ={
-//   login
-// }
-
-// test app
-
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -133,9 +79,8 @@ const productSchema = new mongoose.Schema({
 
 productSchema.virtual("coverImagePath").get(function () {
   if (this.coverImage != null && this.coverImageType != null) {
-    return `data:${
-      this.coverImageType
-    };charset=utf-8;base64,${this.coverImage.toString("base64")}`;
+    return `data:${this.coverImageType
+      };charset=utf-8;base64,${this.coverImage.toString("base64")}`;
   }
 });
 
@@ -207,9 +152,9 @@ const Order = new mongoose.model("Order", orderSchema);
 //     }
 //   });
 // });
-const {isNull} = require("lodash");
+const { isNull } = require("lodash");
 
-function login (username, password) {
+function login(username, password) {
   if (username.isAuthenticated()) {
     return 'fales';
   } else {
@@ -220,12 +165,12 @@ function login (username, password) {
   return 'true';
 }
 
-function login (username, password) {
+function login(username, password) {
   const user = new User({
     username: username,
     password: password,
   });
-  if(isNull(user)){
+  if (isNull(user)) {
     throw new Error('tài khoản không tồn tại')
   }
   return 'thành công';
@@ -243,6 +188,6 @@ function login (username, password) {
   // });
 }
 
-module.exports ={
+module.exports = {
   login
 }
